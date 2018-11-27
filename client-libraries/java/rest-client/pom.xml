@@ -25,9 +25,9 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:git@github.com:google/gcm.git</connection>
-        <developerConnection>scm:git:git@github.com:google/gcm.git</developerConnection>
-        <url>git@github.com:google/gcm.git</url>
+        <connection>scm:git:git@github.com:adleritech/gcm.git</connection>
+        <developerConnection>scm:git:git@github.com:adleritech/gcm.git</developerConnection>
+        <url>git@github.com:adleritech/gcm.git</url>
     </scm>
     <dependencies>
         <dependency>
@@ -36,4 +36,17 @@
             <version>1.1.1</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>deployment.release</id>
+            <name>Releases</name>
+            <url>https://nexus.aitinternal.org/nexus/content/repositories/adler-itech</url>
+        </repository>
+        <snapshotRepository>
+            <id>deployment.snap</id>
+            <name>Snapshots</name>
+            <url>https://nexus.aitinternal.org/nexus/content/repositories/adler-itech-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

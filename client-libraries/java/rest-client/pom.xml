@@ -8,6 +8,9 @@
     <name>GCM Java Server Client Library</name>
     <description>Manage GCM on server</description>
     <url>http://github.com/google/gcm</url>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
@@ -34,6 +37,12 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.22.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <distributionManagement>
@@ -48,4 +57,19 @@
             <url>https://nexus.aitinternal.org/nexus/content/repositories/adler-itech-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
